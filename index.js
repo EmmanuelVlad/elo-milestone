@@ -12,7 +12,7 @@ const steamGroups = new SteamGroups(steamClient);
 steamClient.connect();
 steamClient.on("connected", function() {
 	steamUser.logOn({
-		account_name: "nefelly",
+		account_name: process.env.STEAM_USERNAME,
 		password: process.env.STEAM_PASSWORD,
 	});
 });
@@ -40,7 +40,7 @@ steamFriends.on("friend", async (friendSteamId, type) => {
 			const userElo = userData.games.csgo.faceit_elo;
 			if (userElo >= 3000) {
 				setTimeout(() => {
-					steamGroups.inviteUserToGroup("103582791467410012", friendSteamId);
+					steamGroups.inviteUserToGroup(process.env.STEAM_GROUP_ID, friendSteamId);
 					setTimeout(() => {
 						steamFriends.sendMessage(friendSteamId, "You've been invited to the group, welcome 3k elo bot!");
 						setTimeout(() => {
