@@ -1,0 +1,30 @@
+{
+  "name": "elo-milestone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmmanuelVlad/elo-milestone.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EmmanuelVlad/elo-milestone/issues"
+  },
+  "homepage": "https://github.com/EmmanuelVlad/elo-milestone#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "steam": "^1.4.1",
+    "steam-groups": "^2.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-nefely-base": "^1.0.0",
+    "nodemon": "^2.0.4"
+  }
+}
